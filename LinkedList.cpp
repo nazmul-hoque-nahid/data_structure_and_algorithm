@@ -48,6 +48,15 @@ Node*insertLast(Node*head,int data){
     current->next=temp;
     return head;
 }
+Node*deleteFirstNode(Node*head){
+if(head!=NULL){
+  Node*temp=head;
+  head=head->next;
+  delete temp;
+  return head;
+}
+return NULL;
+}
 int main() {
 Node *head=NULL,*temp=NULL,*current=NULL;
 int a[6]={9,5,12,7,32,76};
@@ -70,5 +79,6 @@ else cout<<"Not found"; */
 //head=reverse(head);
 //head=insertFirst(head,55);
 //head=insertLast(head,66);
+head=deleteFirstNode(head);
 print(head);
 }
